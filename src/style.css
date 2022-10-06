@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;800&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #ddd;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    min-height: 100vh;
+    gap: 0rem;
+    overflow-x: hidden;
+    grid-template-rows: 80px 1fr .1fr;
+}
+
+.header{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+ul li{
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+ul li::after{
+    content: '';
+    background-color: red;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: all .3s ease-in-out;
+
+}
+ul li:hover{
+    color: rgb(93, 168, 93);
+}
+
+ul li:hover::after{
+    width: 100%;
+}
+.header button{
+    cursor: pointer;
+    padding: 8px 25px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    background-color: rgb(126, 170, 126);
+
+}
+.content  .innerBox{
+    height: 70%;
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    gap: 10rem;
+}
+.content .bannerImage{
+    width: 100%;
+    height: 700px;
+}
+
+.content .bannerContent{
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    background-color: rgba(206, 59, 59, 0.648);
+}
+.content h1{
+    margin-bottom: 0;
+}
+.content div h3{
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: rgb(255, 0, 0);
+}
+.header button:hover{
+    background-color: rgb(229, 235, 229);
+}
+
+.logo{
+    width: 130px;
+}
+
+.content{
+    margin: 0 auto;
+    box-shadow: 0 5px 5px rgba(216, 213, 213, 0.877);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 70vh;
+    color: #fff;
+    padding: .5rem .2rem;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.content .box{
+    display: grid;
+    place-items: center;
+    max-width:290px;
+    background-color: rgba(255, 255, 255, 0.63);
+    color: #333;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .05);
+}
+.content .box:hover img{
+    transform: scale(1.1);
+}
+.content .box img{
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+.content .box h1{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.content .box p{
+    margin-left: 2rem;
+    margin-top: 0;
+}
+.content .box .carts{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 7rem;
+   width: 100%;
+   border-top: 1px solid #ddd;
+   padding-top: 1rem;
+}
+.content .box .carts i{
+    color: orange;
+    cursor: pointer;
+}
+.content .box .carts i:hover{
+    color: rgb(255, 123, 0);
+}
+
+
+.content .box button{
+    background-color: rgb(119, 163, 119);
+    border: 1px solid rgb(119, 163, 119);
+    padding: 5px 15px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.content .box button:hover{
+    background-color: transparent;
+    transform: scale(1.01);
+    color: #333;
+}
+
+.content h1{
+    font-size: 4rem;
+}
+.content h3{
+    font-size: 2rem;
+}
+
+
+.footer{
+    background-color: rgb(24, 23, 23);
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .logo{
+    width: 130px;
+    height: 130px;
+    align-self: center;
+}
+
+.footer>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.footer>div p{
+    padding: 8px 45px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.footer>div p:hover{
+    background-color: rgb(71, 71, 71);
+   
+}
+
+.header .bar{
+    font-size: 2rem;
+    color: black;
+    display: none;
+}
+
+.content .cardBox{
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.116);
+}
+.content .cardBox img{
+    width: 100%;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.content .cardBox .boxCon{
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    background:linear-gradient(rgba(0, 0, 0, 0),#000);
+}
+
+.content .cardBox:hover img{
+    transform: scale(1.2);
+}
+
+.content .cardBox .boxCon .carts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.content .cardBox .boxCon .btn{
+    padding: 4px 15px;
+    background-color: white;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.content .cardBox .boxCon .btn:hover{
+    background-color: rgb(228, 55, 55);
+    color: white;
+}
+
+.content .cardBox .boxCon h1{
+    font-size: 1.3rem;
+}
+
+
+
+@media(max-width:640px){
+    .header{
+        padding: 0;
+        padding-right: .5rem;
+    }
+    .header .bar{
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2.3rem;
+        z-index: 11;
+        color: rgb(143, 214, 143);
+    }
+    ul{
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(41, 39, 39);
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        color: white;
+        top: -105%;
+        padding: 0;
+        gap: 0;
+        z-index: 10;
+        transition: all .3s ease-in-out;
+    }
+    ul.open{
+        top: -2rem;
+        bottom: -2rem;
+    }
+
+    ul li{
+        padding: .5rem;
+    }
+    ul li::after{
+       width: 0;
+    }
+    ul li:hover{
+        color: white;
+    }
+    ul li:hover::after{
+        left: 0rem;
+    }
+    .footer{
+       flex-direction: column;
+       gap: 0;
+       justify-content: center;
+       align-items: center;
+    }
+    .content{
+        width: 100vw;
+    }
+    .content .box{
+        display: grid;
+        min-width: 75vw;
+    }
+
+}
